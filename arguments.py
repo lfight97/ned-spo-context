@@ -1,0 +1,35 @@
+args = {
+    #'data_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_roberta_epoch_1/wikidata_query/data/',
+    'data_dir': os.path.join(os.getcwd(),'./data_context_merged_window3_with_desc/'),
+    'model_type':  'roberta',
+    'model_name': 'roberta-base',
+    'task_name': 'binary',
+    'output_dir': os.path.join(os.getcwd(),'./outputs_context_merged_window3_with_desc/'),
+    'cache_dir': os.path.join(os.getcwd(),'./cache/'),
+    'do_train': True,
+    'do_eval': True,
+    'fp16': False,
+    'fp16_opt_level': 'O1',
+    'max_seq_length': 512,
+    'output_mode': 'classification',
+    'train_batch_size': 6,
+    'eval_batch_size': 32,
+
+    'gradient_accumulation_steps': 1,
+    'num_train_epochs': 1,
+    'weight_decay': 0,
+    'learning_rate': 2e-5,
+    'adam_epsilon': 1e-8,
+    'warmup_ratio': 0.06,
+    'warmup_steps': 0,
+    'max_grad_norm': 1.0,
+
+    'logging_steps': 50,
+    'evaluate_during_training': False,
+    'save_steps': 2000,
+    'eval_all_checkpoints': True,
+
+    'overwrite_output_dir': False,
+    'reprocess_input_data': False,
+    'notes': 'Using Wikidata dataset'
+}
